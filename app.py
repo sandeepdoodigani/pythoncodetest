@@ -11,4 +11,5 @@ try:
     repo.get_contents("/")
     print(repo.get_contents("/"))
 except GithubException as e:
-    print(e.args[1]['message']) # output: This repository is empty.
+    print(e.args[1]['message']) 
+    # output: This repository is empty.
