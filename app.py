@@ -3,7 +3,7 @@ from github import GithubException
 import requests
 
 
-nAME="sandeep"
+a="sandeep"
 
 g = github.Github("9d76f2557ac81e158469e5fae9256e48b548e894")
 
