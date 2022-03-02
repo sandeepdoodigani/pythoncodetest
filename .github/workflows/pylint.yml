@@ -1,6 +1,9 @@
 name: Pylint
 
 on: [push]
+    repository_dispatch:
+    schedule:
+      - cron: '5 12 * * 0'
 
 jobs:
   build:
