@@ -21,3 +21,10 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         pylint $(git ls-files '*.py') --disable=missing-docstring
+    - name: Make Request
+      id: myRequest
+      uses: fjogeleit/http-request-action@v1
+      with:
+        url: "http://api.openweathermap.org/data/2.5/weather?q=Hyderabad,IN&appid=b0bda333f2437f99eab18e5ac686df47i"
+    - name: Show Response
+      run: echo ${{ steps.myRequest.outputs.response }}
